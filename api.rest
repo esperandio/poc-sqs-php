@@ -1,0 +1,33 @@
+POST http://localhost:8080 HTTP/1.1
+content-type: application/json
+
+{
+    "logs": [
+        {
+            "id": 1,
+            "ds_event": "StartApplicationEvent",
+            "dt_event": "2021-09-18 13:45:52"
+        },
+        {
+            "id": 2,
+            "ds_event": "StartWatcherEvent",
+            "dt_event": "2021-09-18 13:46:14"
+        },
+        {
+            "id": 3,
+            "ds_event": "IdleTimeEvent",
+            "dt_event": "2021-09-18 13:46:28",
+            "nr_milliseconds_idle": "9469"
+        },
+        {
+            "id": 4,
+            "ds_event": "StopWatcherEvent",
+            "dt_event": "2021-09-18 13:46:31"
+        },
+        {
+            "id": 5,
+            "ds_event": "ExitApplicationEvent",
+            "dt_event": "2021-09-18 13:46:46"
+        }
+    ]
+}

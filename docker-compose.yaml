@@ -1,0 +1,20 @@
+version: "3.7"
+
+services:
+    php:
+        image: php
+        command: php -S 0.0.0.0:8080 -t .
+        ports:
+            - 8080:8080
+        working_dir: /poc-sqs-php
+        volumes:
+            - ./:/poc-sqs-php
+            - $HOME/.aws:/root/.aws
+        container_name: php
+    composer:
+        image: composer
+        command: install
+        working_dir: /poc-sqs-php
+        volumes:
+            - ./:/poc-sqs-php
+        container_name: composer
